@@ -1,0 +1,303 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f5f4fa;
+    color: #252239;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 35px 22px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: #7655e8;
+}
+
+header button {
+    background: white;
+    border: 1px solid #e8e5ef;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.welcome {
+    margin: 65px 0 35px;
+}
+
+.welcome p:first-child {
+    color: #8c7bc0;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.welcome h1 {
+    font-size: clamp(35px, 6vw, 55px);
+    margin: 12px 0;
+}
+
+.welcome h1 span {
+    color: #7957e8;
+}
+
+.welcome p:last-child {
+    color: #888397;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px #29204b0a;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-heading span {
+    color: #9992a8;
+    font-size: 13px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #e8e5ef;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+}
+
+.task-input input:focus {
+    border-color: #7957e8;
+}
+
+.task-input button {
+    width: 45px;
+    border: none;
+    background: #7957e8;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 4px;
+    border-bottom: 1px solid #f0edf5;
+}
+
+.task input {
+    accent-color: #7957e8;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.task span {
+    flex: 1;
+    font-size: 14px;
+}
+
+.task.done span {
+    text-decoration: line-through;
+    color: #aaa5b5;
+}
+
+.delete-btn {
+    border: none;
+    background: transparent;
+    color: #b3aebd;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.progress-area {
+    margin-top: 25px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #8c879a;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #eeeaf5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #7957e8, #c17cf5);
+    transition: width 0.4s;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.timer-card {
+    text-align: center;
+    background: linear-gradient(145deg, #7957e8, #9c72f2);
+    color: white;
+    padding: 30px;
+}
+
+.tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    font-weight: 700;
+}
+
+#timer {
+    font-size: 65px;
+    font-weight: 800;
+    margin: 18px 0 5px;
+    font-variant-numeric: tabular-nums;
+}
+
+#timerStatus {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.timer-buttons button {
+    border: none;
+    background: white;
+    color: #7957e8;
+    padding: 11px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.quote-card {
+    background: #252239;
+    color: white;
+    flex: 1;
+}
+
+.quote-card h2 {
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.quote-card button {
+    background: transparent;
+    color: #c5aaff;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 10px;
+    color: #aaa4b6;
+    letter-spacing: 2px;
+}
+
+body.dark {
+    background: #151321;
+    color: #f4f0ff;
+}
+
+body.dark .card:not(.timer-card):not(.quote-card) {
+    background: #242033;
+}
+
+body.dark .task-input input {
+    background: #302a42;
+    color: white;
+    border-color: #443b59;
+}
+
+body.dark .task {
+    border-color: #393248;
+}
+
+body.dark .task span {
+    color: #f4f0ff;
+}
+
+body.dark .task.done span {
+    color: #aaa5b5;
+}
+
+body.dark .progress-bar {
+    background: #393248;
+}
+
+body.dark header button {
+    background: #302a42;
+    border-color: #443b59;
+}
+
+@media(max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        margin-top: 45px;
+    }
+}

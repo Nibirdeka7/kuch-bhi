@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Your Daily Space</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">✦ FocusFlow</div>
+            <button id="themeBtn">☀️</button>
+        </header>
+
+        <section class="welcome">
+            <p id="date">YOUR DAILY SPACE</p>
+            <h1>Make today <span>count.</span></h1>
+            <p>Small steps. Big progress. Let's get things done.</p>
+        </section>
+
+        <section class="dashboard">
+
+            <div class="card task-card">
+                <div class="card-heading">
+                    <h2>My Tasks</h2>
+                    <span id="taskCount">0 tasks</span>
+                </div>
+
+                <div class="task-input">
+                    <input id="taskInput" type="text"
+                        placeholder="What needs to be done?">
+                    <button id="addBtn">+</button>
+                </div>
+
+                <div id="taskList"></div>
+
+                <div class="progress-area">
+                    <div class="progress-label">
+                        <span>Daily progress</span>
+                        <span id="progressText">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+
+                <div class="card timer-card">
+                    <p class="tag">FOCUS SESSION</p>
+                    <div id="timer">25:00</div>
+                    <p id="timerStatus">Ready when you are.</p>
+
+                    <div class="timer-buttons">
+                        <button id="startBtn">▶ Start</button>
+                        <button id="resetBtn">↻</button>
+                    </div>
+                </div>
+
+                <div class="card quote-card">
+                    <p class="tag">DAILY REMINDER</p>
+                    <h2 id="quote">"Great things are done by a series of small things brought together."</h2>
+                    <button id="quoteBtn">New inspiration ↗</button>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            MADE WITH ♥ AND JAVASCRIPT
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
